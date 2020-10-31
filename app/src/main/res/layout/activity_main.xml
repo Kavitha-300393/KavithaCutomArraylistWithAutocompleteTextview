@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            >
+
+            <TextView
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Employee Details"
+                android:textSize="20dp"
+                android:id="@+id/text"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.appcompat.widget.SearchView
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rectanglegrey"
+            android:id="@+id/searchview"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="15dp"
+            android:hint="Search employee"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/toolbar"
+            />
+    <AutoCompleteTextView
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectanglegrey"
+        android:hint="Search Employee"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/autosearch"
+        android:layout_below="@+id/toolbar"/>
+    <ListView
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/autosearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listview2"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchview"
+            android:id="@+id/listview"
+
+            />
+
+    </RelativeLayout>
